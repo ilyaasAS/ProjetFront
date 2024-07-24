@@ -205,19 +205,23 @@ nav {
     z-index: 2;
 }
 
+
+
 .welcome-section h1 {
+    font-family: 'Kristi', cursive; /* Assure-toi que Kristi est bien importée */
+    color: #F23131;
     font-size: 50px;
     line-height: 50px;
-    margin-bottom: 10px;
-    color: #F23131; /* Couleur rouge */
-    font-family: 'Merriweather', serif; /* Correction de la police */
+    font-weight: 300; /* Poids plus léger */
 }
 
+
 .welcome-section h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    font-family: 'Merriweather', serif; /* Correction de la police */
-    color: whitesmoke;
+    font-weight: 300;
+    font-size: 65px;
+    letter-spacing: -1px;
+    line-height: 66px;
+    text-transform: uppercase;
 }
 
 .welcome-section p {
