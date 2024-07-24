@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Avant Première</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/app.css">
+
 </head>
 <body>
+
+    <div id="container">
     <!-- En-tête -->
     <header>
         <div class="header-left">
-            <a href="#">Accueil</a>
-            <a href="#">Plan</a>
+            <a href="#"><i class="fas fa-phone-alt fa-fw"></i> Afficher</a>
+            <a href="#"><i class="fas fa-map-marker-alt fa-fw"></i>Plan</a>
             <div class="reviews">
                 <span>★★★★★</span>
                 <span>3 469 Avis</span>
             </div>
         </div>
         <div class="header-right">
-            <button class="btn btn-reserver" type="button">Réserver</button>
-            <button class="btn btn-panier" type="button">Panier</button>
-            <button class="btn btn-langue" type="button">FR</button>
+            <button class="btn btn-reserver" type="button">
+                <i class="fas fa-calendar-alt"></i> Réserver
+            </button>
+            
+            <button class="btn btn-panier" type="button">
+                <i class="fas fa-shopping-cart"></i> Panier
+            </button>
+            <button class="btn btn-langue" type="button">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="FR" class="flag-icon"> FR
+            </button>
         </div>
     </header>
 
@@ -36,6 +47,7 @@
                 <a href="#">Commandes en ligne</a>
                 <a href="#" class="highlight-red">À la carte</a>
                 <a href="#">Chèque cadeau</a>
+                <a href="#">Galerie Photo</a>
                 <a href="#">Actualités</a>
                 <a href="#">Contactez-nous</a>
             </div>
@@ -143,6 +155,7 @@
     <footer>
         <p>&copy; L'AVANT PREMIÈRE 2024 — <a href="#">Mentions légales</a> — <a href="#">Politique de confidentialité</a></p>
     </footer>
+</div>
 </body>
 </html>
 

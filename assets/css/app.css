@@ -14,6 +14,14 @@ body {
     line-height: 1.6;
 }
 
+.content-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
 /* En-tête */
 header {
     display: flex;
@@ -41,7 +49,7 @@ header {
     margin-right: 20px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    
 }
 
 .reviews {
@@ -93,6 +101,12 @@ header {
     background-color: #2196F3; /* Bleu */
 }
 
+.btn-panier i {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+    font-size: 16px; /* Taille de l'icône */
+}
+
+
 .btn-panier:hover {
     background-color: #0b79d0; /* Bleu plus foncé au survol */
 }
@@ -101,6 +115,15 @@ header {
 .btn-langue {
     background-color: red; /* Rouge pour le bouton Langue */
 }
+
+.btn-langue .flag-icon {
+    width: 20px; /* Ajuste la largeur du drapeau */
+    height: auto; /* Garde les proportions du drapeau */
+    vertical-align: middle; /* Aligne verticalement l'image avec le texte */
+    margin-right: 8px; /* Espacement entre le drapeau et le texte */
+}
+
+
 
 .btn-langue:hover {
     background-color: darkred; /* Rouge plus foncé au survol */
@@ -125,18 +148,26 @@ nav {
 
 /* Éléments de la navigation */
 .nav-left {
-    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-size: 25px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #fff;
     font-weight: bold;
-    color: #ff6347; /* Couleur rouge */
+    /* color: #ff6347; Couleur rouge */
 }
 
 .nav-right a {
-    color: white;
-    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 7px 0px;
     margin: 0 10px;
-    padding: 5px 10px;
-    border-radius: 5px; /* Ajout d'une bordure arrondie */
-    transition: background-color 0.3s; /* Transition douce pour les changements de couleur */
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15px;
+    text-transform: uppercase;
+    
 }
 
 .nav-right a:hover {
