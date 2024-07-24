@@ -1,1 +1,407 @@
-@import url(./components/global.css);
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Styles du corps */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Réduit le padding pour plus de compacité */
+    background-color: #080808; /* Couleur de fond de l'en-tête */
+    color: white;
+    position: fixed; /* Fixe l'en-tête en haut de la page */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #333; /* Ajout d'une bordure en bas */
+}
+
+/* Styles pour les éléments à l'intérieur de l'en-tête */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+}
+
+.reviews span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.reviews span:first-child {
+    font-size: 18px; /* Ajuster la taille des étoiles si nécessaire */
+    color: #FFD700; /* Couleur dorée pour les étoiles */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; /* Ajout d'une bordure arrondie */
+    transition: background-color 0.3s; /* Transition douce pour les changements de couleur */
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Bouton Réserver */
+.btn-reserver {
+    background-color: #4CAF50; /* Vert */
+}
+
+.btn-reserver:hover {
+    background-color: #45a049; /* Vert plus foncé au survol */
+}
+
+/* Panier */
+.btn-panier {
+    background-color: #2196F3; /* Bleu */
+}
+
+.btn-panier:hover {
+    background-color: #0b79d0; /* Bleu plus foncé au survol */
+}
+
+/* Bouton Langue */
+.btn-langue {
+    background-color: red; /* Rouge pour le bouton Langue */
+}
+
+.btn-langue:hover {
+    background-color: darkred; /* Rouge plus foncé au survol */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.3); /* Couleur avec transparence */
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    position: fixed; /* Positionné fixement en haut de la page */
+    top: 60px; /* Positionne juste en dessous de l'en-tête */
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #333; /* Ajout d'une bordure en bas */
+}
+
+/* Éléments de la navigation */
+.nav-left {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6347; /* Couleur rouge */
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px; /* Ajout d'une bordure arrondie */
+    transition: background-color 0.3s; /* Transition douce pour les changements de couleur */
+}
+
+.nav-right a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond au survol */
+}
+
+.nav-right a.highlight-red {
+    background-color: #ff6347;
+    color: white;
+}
+
+.nav-right a.highlight-yellow {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Section Bienvenue */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne le contenu à gauche */
+    text-align: left; /* Texte aligné à gauche */
+    background-image: url('https://lh3.googleusercontent.com/0MouoYGGr4smx5tARYQNQidMmaYhK1VWtKDYL8dIdtraYd8c2FwGBDQXyZpaMpUbO1YI_hhGRJS_Zf6xQtv9Uw=s2500');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px; /* Ajoutez de l'espace pour le contenu */
+    color: white;
+    position: relative;
+    margin-top: 60px; /* Assurez-vous que la section commence juste après la nav */
+}
+
+/* Styles pour le contenu de la section bienvenue */
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-section h1 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    color: #F23131; /* Couleur rouge */
+    font-family: 'Merriweather', serif; /* Correction de la police */
+}
+
+.welcome-section h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif; /* Correction de la police */
+    color: whitesmoke;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-commander {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Card 2 */
+.restaurant-section {
+    padding: 2em 0;
+    background-color: #fff;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurant-content {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+}
+
+.text-container span, .text-container h4 {
+    color: #333;
+}
+
+.text-container p {
+    color: #555;
+}
+
+/* Section Notre Cuisine */
+.cuisine-section {
+    padding: 2em 0;
+    background-color: #fff;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cuisine-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 0 20px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.text-container span.highlight-red {
+    color: #ff6347; /* Couleur rouge */
+}
+
+.text-container h4 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-family: 'Merriweather', serif;
+    color: #333;
+}
+
+.text-container p {
+    margin: 10px 0;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px; /* Espacement autour de l'image */
+    display: flex;
+    justify-content: flex-end; /* Aligne l'image à droite */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+/* Section avec 3 images */
+.three-images-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.three-images-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.three-image-container img {
+    width: 32%;
+    border-radius: 10px;
+    object-fit: cover; /* Assure que les images s'adaptent au conteneur sans déformation */
+}
+
+/* Newsletter et Horaires */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.newsletter-section,
+.hours-section,
+.map-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.newsletter-section h2,
+.hours-section h2,
+.map-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif; /* Correction de la police */
+}
+
+.newsletter-section .newsletter-box,
+.hours-section .hours-box,
+.map-section .map-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section p,
+.hours-section p,
+.map-section p {
+    margin-bottom: 10px;
+}
+
+.newsletter-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-section input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-section button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition douce pour le bouton */
+}
+
+.newsletter-section button:hover {
+    background-color: #e55347; /* Couleur plus sombre au survol */
+}
+
+.hours-section .hours-box p {
+    margin: 10px 0;
+}
+
+.map-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Pied de page */
+footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ff6347;
+    text-decoration: none;
+    margin: 0 5px;
+}

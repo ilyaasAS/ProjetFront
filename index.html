@@ -1,18 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world</title>
+    <title>L'Avant Première</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/app.css">
-    
 </head>
-
 <body>
-    <h1>jolie</h1>
+    <!-- En-tête -->
+    <header>
+        <div class="header-left">
+            <a href="#">Accueil</a>
+            <a href="#">Plan</a>
+            <div class="reviews">
+                <span>★★★★★</span>
+                <span>3 469 Avis</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn btn-reserver" type="button">Réserver</button>
+            <button class="btn btn-panier" type="button">Panier</button>
+            <button class="btn btn-langue" type="button">FR</button>
+        </div>
+    </header>
+
+    <!-- Section Bienvenue avec Navigation -->
+    <section class="welcome-section">
+        <nav>
+            <div class="nav-left">
+                <span>L'AVANT PREMIÈRE</span>
+            </div>
+            <div class="nav-right">
+                <a href="#">Accueil</a>
+                <a href="#">Commandes en ligne</a>
+                <a href="#" class="highlight-red">À la carte</a>
+                <a href="#">Chèque cadeau</a>
+                <a href="#">Actualités</a>
+                <a href="#">Contactez-nous</a>
+            </div>
+        </nav>
+        <div class="welcome-content">
+            <h1>Bienvenue</h1>
+            <h2>L'AVANT PREMIÈRE</h2>
+            <p>Restaurant - Comptoir</p>
+            <a href="#" class="btn-commander">Commander en ligne !</a>
+        </div>
+    </section>
 
 
-    <script src="./assets/js/app.js"></script>
-    
+
+ <!-- Card 1 avec image à gauche -->
+ <section class="restaurant-section">
+    <div class="restaurant-content">
+        <div class="image-container">
+            <img src="https://lh3.googleusercontent.com/9bJe-IIVSvSLbdYFtbFHROJl9VR5Ostlevo97-uth6iHCDIpKHPpb6PH_niEGFUBOh_2ZcJmOyPfyXDmMFiRlw=w800-h600" alt="Restaurant">
+        </div>
+        <div class="text-container">
+            <span>Découvrez</span>
+            <h4>NOTRE RESTAURANT</h4>
+            <p>Découvrez vite l'Avant-Première, brasserie traditionnelle dans les Hauts de Cergy (anciennement Cergy le Haut), face au cinéma UGC Ciné Cité Cergy le Haut.
+                Inauguré début juillet 2017, le restaurant vous accueille midis et soirs, ainsi qu'en journée pour boire un verre ou pour vous restaurer.</p>
+            <hr>
+            <p>Aux commandes, retrouvez Marie-Laure et Adrien, qui vous proposent ici de passer un moment convivial en famille ou entre amis, en sortant du travail ou avant votre séance de cinéma !</p>
+        </div>
+    </div>
+</section>
+
+
+    <img src="https://lh3.googleusercontent.com/Xkpb505UHOeGNaGXMtEEKERrelB37sfTLrBqFU1YuF2LHhl3lei51FJ3CO-hksrIc587zXoZnjsGV6Da8JopHg=w1280" alt="Notre Restaurant">
+
+
+    <!-- Section Notre Cuisine -->
+<section class="cuisine-section">
+    <div class="cuisine-content">
+        <div class="text-container">
+            <span class="highlight-red">Dégustez</span>
+            <h4>NOTRE CUISINE</h4>
+            <p>Habitué à proposer des plats bistronomiques dans son restaurant de Port Cergy, le Chef Adrien vous propose ici une palette de petits plats maisons, où les viandes et les poissons sont à l'honneur et changent avec les saisons.</p>
+            <p>Les amateurs y retrouveront également des burgers et des pizzas le tout fait-maison bien sûr.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://lh3.googleusercontent.com/Q8JdnDN9brkulKjtkuEEgOobqpqX1w3MFV7kta2WPwN5nazcgE9d7-pd_-8kLIFqEeCWlrNBD6pULhIWA2rRWQ=s500" alt="Notre Cuisine">
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Section avec 3 images -->
+    <section class="three-images-section">
+        <div class="three-images-content">
+            <div class="three-image-container">
+                <img src="https://lh3.googleusercontent.com/Kgny4OZJz_gJ8xEqZvfPqzG-5GVxrLGjq8N5ggz7wgdrfwfVRILtjmOMteNcEZrn9jd7Ohvm-ygxR1_u-CT4=s1200" alt="Image 1">
+                <img src="https://lh3.googleusercontent.com/4Mjca0he0duKkXA8bUUKkJ26jRK-RuVQWBsjkHlQOGk4EIwMhV4RxEGi3VcZd6yOPX4CCJpiAoHtf8wbJ978=s1200" alt="Image 2">
+                <img src="https://lh3.googleusercontent.com/NvqaTZeF-2DGzY2du1XxYkNDkFcGghOA2H0bO5UHX92qHaOAPJ13cG39AYjHRffbN4kxIlOgN5DI5MV7DcGiUg=s1200" alt="Image 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Newsletter et Horaires -->
+    <section class="info-section">
+        <div class="newsletter-section">
+            <h2>NEWSLETTER</h2>
+            <hr class="underline">
+            <div class="newsletter-box">
+                <p>Recevez nos dernières nouveautés et des promotions exclusives !</p>
+                <form>
+                    <input type="email" placeholder="Adresse e-mail" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="hours-section">
+            <h2>HORAIRES D'OUVERTURE</h2>
+            <hr class="underline">
+            <div class="hours-box">
+                <p><strong>Lundi:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 14h00 et de 19h00 à 22h00</p>
+                <p><strong>Mardi:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 14h00 et de 19h00 à 22h00</p>
+                <p><strong>Mercredi:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 14h00 et de 19h00 à 22h00</p>
+                <p><strong>Jeudi:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 14h00 et de 19h00 à 22h00</p>
+                <p><strong>Vendredi:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 22h00 sans interruption</p>
+                <p><strong>Samedi:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 22h00 sans interruption</p>
+                <p><strong>Dimanche:</strong> 9h00 à 1h00<br>Service bar de 9h à 1h00 sans interruption<br>Service Restauration de 12h00 à 22h00 sans interruption</p>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2>CARTE</h2>
+            <hr class="underline">
+            <div class="map-box">
+                <p>20 Rue de l'Espérance<br>95800 Cergy</p>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=20+Rue+de+l'Espérance+95800+Cergy&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7C20+Rue+de+l'Espérance+95800+Cergy" alt="Map">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; L'AVANT PREMIÈRE 2024 — <a href="#">Mentions légales</a> — <a href="#">Politique de confidentialité</a></p>
+    </footer>
 </body>
 </html>
+
