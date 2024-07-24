@@ -240,20 +240,26 @@ nav {
 }
 
 /* Card 2 */
+/* Section restaurant */
+
 .restaurant-section {
     padding: 2em 0;
-    background-color: #fff;
-    margin-bottom: 1em;
-    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 2em; /* Augmentez l'espace entre la section restaurant et la suivante */
+    border-radius: 2px; /* Gardez le rayon des coins pour la section restaurant */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1150px; /* Largeur totale de la section */
+    margin: 0 auto; /* Centre la section */
 }
 
 .restaurant-content {
     display: flex;
     align-items: center;
+    width: 100%; /* Assure que le contenu prend toute la largeur de la section */
+    padding: 0 20px;
 }
 
 .image-container {
@@ -273,7 +279,7 @@ nav {
 }
 
 .text-container span, .text-container h4 {
-    font-family: 'Kristi';
+    font-family: 'Kristi'; /* Police spécifique */
     color: #F23131;
     font-size: 50px;
     line-height: 50px;
@@ -286,45 +292,27 @@ nav {
 /* Section Notre Cuisine */
 .cuisine-section {
     padding: 2em 0;
-    background-color: #fff;
-    margin-bottom: 1em;
-    border-radius: 8px;
+    background-color: #ffffff; /* Assurez-vous que la couleur de fond est la même que pour restaurant */
+    margin-bottom: 2em; /* Assurez-vous que l'espace en bas est le même que pour restaurant */
+    border-radius: 2px; /* Ajustez le rayon des coins pour correspondre à restaurant */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1150px; /* Ajustez la largeur totale pour correspondre à restaurant */
+    margin: 0 auto; /* Assurez-vous que la section est centrée */
 }
 
 .cuisine-content {
     display: flex;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%; /* Assurez-vous que le contenu prend toute la largeur de la section */
     padding: 0 20px;
-}
-
-.text-container {
-    flex: 1;
-    padding: 10px;
-    text-align: left;
-}
-
-.text-container h4 {
-    color: #000;
-    font-weight: 900;
-    font-size: 35px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro';
-    font-style: bold;
-}
-
-.text-container p {
-    margin: 10px 0;
-    color: #555;
-    font-family: 'Roboto', sans-serif;
 }
 
 .image-container {
     flex: 1;
-    padding: 10px;
+    padding: 10px; /* Gardez le padding consistant avec le design global */
     display: flex;
     justify-content: flex-end;
 }
@@ -335,6 +323,29 @@ nav {
     border-radius: 8px;
 }
 
+.text-container {
+    flex: 1;
+    padding: 1em; /* Assurez-vous que le padding est cohérent avec restaurant */
+    text-align: left;
+}
+
+.text-container h4 {
+    color: #000;
+    font-weight: 900;
+    font-size: 35px; /* Conserver la taille spécifiée */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro'; /* Police spécifique */
+    font-style: bold;
+}
+
+.text-container p {
+    margin: 10px 0;
+    color: #555;
+    font-family: 'Roboto', sans-serif; /* Police spécifique */
+}
+
+
 /* Section avec 3 images */
 .three-images-section {
     padding: 50px 20px;
@@ -343,13 +354,18 @@ nav {
 
 .three-images-content {
     display: flex;
+    text-align: center;
     justify-content: space-between;
+    
 }
 
 .three-image-container img {
     width: 32%;
     border-radius: 10px;
     object-fit: cover;
+    height: 650px; /* Ajustez la hauteur souhaitée ici */
+    border-radius: 2px;
+    height: 500px;
 }
 
 /* Newsletter et Horaires */
@@ -616,3 +632,13 @@ footer {
         padding: 0.5em;
     }
 }
+
+.picture img {
+    border-radius: 2px;
+    height: 500px;
+    box-sizing: border-box;
+    width: 1260px;
+    object-fit: cover;
+}
+
+
