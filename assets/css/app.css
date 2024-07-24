@@ -115,8 +115,8 @@ nav {
     padding: 10px 20px;
     color: white;
     width: 100%;
-    position: fixed; /* Positionné fixement en haut de la page */
-    top: 60px; /* Positionne juste en dessous de l'en-tête */
+    position: relative; /* Positionné fixement en haut de la page */
+    top: -97px; /* Positionne juste en dessous de l'en-tête */
     left: 0;
     z-index: 999;
     backdrop-filter: blur(10px);
