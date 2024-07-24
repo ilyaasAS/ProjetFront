@@ -1,3 +1,5 @@
+@import url(./components/global.css);
+
 /* Reset de base */
 * {
     margin: 0;
@@ -21,22 +23,21 @@ body {
     padding: 0 15px;
 }
 
-
 /* En-tête */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px; /* Réduit le padding pour plus de compacité */
-    background-color: #080808; /* Couleur de fond de l'en-tête */
+    padding: 20px 20px;
+    background-color: #080808;
     color: white;
-    position: fixed; /* Fixe l'en-tête en haut de la page */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333; /* Ajout d'une bordure en bas */
+    border-bottom: 1px solid #333;
 }
 
 /* Styles pour les éléments à l'intérieur de l'en-tête */
@@ -49,7 +50,6 @@ header {
     margin-right: 20px;
     text-decoration: none;
     color: white;
-    
 }
 
 .reviews {
@@ -63,8 +63,8 @@ header {
 }
 
 .reviews span:first-child {
-    font-size: 18px; /* Ajuster la taille des étoiles si nécessaire */
-    color: #FFD700; /* Couleur dorée pour les étoiles */
+    font-size: 18px;
+    color: #FFD700;
 }
 
 .header-right {
@@ -79,8 +79,8 @@ header {
     color: white;
     font-size: 14px;
     cursor: pointer;
-    border-radius: 5px; /* Ajout d'une bordure arrondie */
-    transition: background-color 0.3s; /* Transition douce pour les changements de couleur */
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -89,44 +89,41 @@ header {
 
 /* Bouton Réserver */
 .btn-reserver {
-    background-color: #4CAF50; /* Vert */
+    background-color: #4CAF50;
 }
 
 .btn-reserver:hover {
-    background-color: #45a049; /* Vert plus foncé au survol */
+    background-color: #45a049;
 }
 
 /* Panier */
 .btn-panier {
-    background-color: #2196F3; /* Bleu */
+    background-color: #2196F3;
 }
 
 .btn-panier i {
-    margin-right: 8px; /* Espacement entre l'icône et le texte */
-    font-size: 16px; /* Taille de l'icône */
+    margin-right: 8px;
+    font-size: 16px;
 }
 
-
 .btn-panier:hover {
-    background-color: #0b79d0; /* Bleu plus foncé au survol */
+    background-color: #0b79d0;
 }
 
 /* Bouton Langue */
 .btn-langue {
-    background-color: red; /* Rouge pour le bouton Langue */
+    background-color: red;
 }
 
 .btn-langue .flag-icon {
-    width: 20px; /* Ajuste la largeur du drapeau */
-    height: auto; /* Garde les proportions du drapeau */
-    vertical-align: middle; /* Aligne verticalement l'image avec le texte */
-    margin-right: 8px; /* Espacement entre le drapeau et le texte */
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
-
-
 .btn-langue:hover {
-    background-color: darkred; /* Rouge plus foncé au survol */
+    background-color: darkred;
 }
 
 /* Navigation */
@@ -134,28 +131,26 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(34, 34, 34, 0.3); /* Couleur avec transparence */
+    background-color: rgba(34, 34, 34, 0.3);
     padding: 10px 20px;
     color: white;
     width: 100%;
-    position: relative; /* Positionné fixement en haut de la page */
-    top: -97px; /* Positionne juste en dessous de l'en-tête */
+    position: relative;
+    top: -97px;
     left: 0;
     z-index: 999;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333; /* Ajout d'une bordure en bas */
+    border-bottom: 1px solid #333;
 }
 
 /* Éléments de la navigation */
 .nav-left {
     color: #fff;
     text-transform: uppercase;
-    font-size: 16px;
     font-size: 25px;
     letter-spacing: 3px;
     border-bottom: 2px solid #fff;
     font-weight: bold;
-    /* color: #ff6347; Couleur rouge */
 }
 
 .nav-right a {
@@ -167,11 +162,10 @@ nav {
     font-weight: normal;
     line-height: 15px;
     text-transform: uppercase;
-    
 }
 
 .nav-right a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond au survol */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-right a.highlight-red {
@@ -188,15 +182,15 @@ nav {
 .welcome-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligne le contenu à gauche */
-    text-align: left; /* Texte aligné à gauche */
+    align-items: flex-start;
+    text-align: left;
     background-image: url('https://lh3.googleusercontent.com/0MouoYGGr4smx5tARYQNQidMmaYhK1VWtKDYL8dIdtraYd8c2FwGBDQXyZpaMpUbO1YI_hhGRJS_Zf6xQtv9Uw=s2500');
     background-size: cover;
     background-position: center;
-    padding: 100px 20px; /* Ajoutez de l'espace pour le contenu */
+    padding: 100px 20px;
     color: white;
     position: relative;
-    margin-top: 60px; /* Assurez-vous que la section commence juste après la nav */
+    margin-top: 60px;
 }
 
 /* Styles pour le contenu de la section bienvenue */
@@ -205,16 +199,13 @@ nav {
     z-index: 2;
 }
 
-
-
 .welcome-section h1 {
-    font-family: 'Kristi', cursive; /* Assure-toi que Kristi est bien importée */
+    font-family: 'Kristi', cursive;
     color: #F23131;
     font-size: 50px;
     line-height: 50px;
-    font-weight: 300; /* Poids plus léger */
+    font-weight: 300;
 }
-
 
 .welcome-section h2 {
     font-weight: 300;
@@ -226,18 +217,26 @@ nav {
 
 .welcome-section p {
     font-size: 20px;
-    margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 .btn-commander {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    box-shadow: inset 0px 1px 0px 0px #9acc85;
+    background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+    background-color: #74ad5a;
+    border: 1px solid #3b6e22;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 25px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* Card 2 */
@@ -274,7 +273,10 @@ nav {
 }
 
 .text-container span, .text-container h4 {
-    color: #333;
+    font-family: 'Kristi';
+    color: #F23131;
+    font-size: 50px;
+    line-height: 50px;
 }
 
 .text-container p {
@@ -294,7 +296,7 @@ nav {
     display: flex;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto; /* Centrer le contenu */
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -304,15 +306,14 @@ nav {
     text-align: left;
 }
 
-.text-container span.highlight-red {
-    color: #ff6347; /* Couleur rouge */
-}
-
 .text-container h4 {
-    font-size: 24px;
-    margin: 10px 0;
-    font-family: 'Merriweather', serif;
-    color: #333;
+    color: #000;
+    font-weight: 900;
+    font-size: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+    font-style: bold;
 }
 
 .text-container p {
@@ -323,9 +324,9 @@ nav {
 
 .image-container {
     flex: 1;
-    padding: 10px; /* Espacement autour de l'image */
+    padding: 10px;
     display: flex;
-    justify-content: flex-end; /* Aligne l'image à droite */
+    justify-content: flex-end;
 }
 
 .image-container img {
@@ -333,9 +334,6 @@ nav {
     height: auto;
     border-radius: 8px;
 }
-
-
-
 
 /* Section avec 3 images */
 .three-images-section {
@@ -351,7 +349,7 @@ nav {
 .three-image-container img {
     width: 32%;
     border-radius: 10px;
-    object-fit: cover; /* Assure que les images s'adaptent au conteneur sans déformation */
+    object-fit: cover;
 }
 
 /* Newsletter et Horaires */
@@ -374,7 +372,7 @@ nav {
 .map-section h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: 'Merriweather', serif; /* Correction de la police */
+    font-family: 'Merriweather', serif;
 }
 
 .newsletter-section .newsletter-box,
@@ -411,11 +409,11 @@ nav {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transition douce pour le bouton */
+    transition: background-color 0.3s;
 }
 
 .newsletter-section button:hover {
-    background-color: #e55347; /* Couleur plus sombre au survol */
+    background-color: #e55347;
 }
 
 .hours-section .hours-box p {
@@ -430,15 +428,15 @@ nav {
 .map-box {
     display: flex;
     flex-direction: column;
-    align-items:baseline ;
+    align-items: baseline;
     justify-content: center;
 }
 
 .map-box img {
     width: 100%;
-    max-width: 700px; /* Vous pouvez ajuster la largeur maximale selon vos besoins */
+    max-width: 700px;
     border-radius: 8px;
-    margin-bottom: 10px; /* Espacement entre l'image et le texte */
+    margin-bottom: 10px;
 }
 
 .map-box p {
@@ -447,14 +445,174 @@ nav {
 
 /* Pied de page */
 footer {
-    background-color: #222;
-    color: #ddd;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #000;
+    color: #FFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
 }
 
-footer a {
-    color: #ff6347;
-    text-decoration: none;
-    margin: 0 5px;
+.footer-left p,
+.footer-right p {
+    margin: 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-copyright {
+    color: #F23131;
+}
+
+.legal-link,
+.recruitment-link {
+    color: #FFF;
+}
+
+.recruitment-link {
+    color: #F23131;
+}
+
+.footer-highlight {
+    color: #F23131;
+}
+
+.footer-company {
+    color: #FFF;
+}
+
+.footer-dash {
+    color: #F23131;
+}
+
+.footer-right a:hover,
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Tablettes (768px à 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-right {
+        margin-bottom: 10px;
+    }
+
+    .nav-left {
+        font-size: 20px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+    }
+
+    .nav-right a {
+        margin: 5px 0;
+    }
+
+    .welcome-section {
+        padding: 80px 10px;
+        text-align: center;
+    }
+
+    .welcome-section h1 {
+        font-size: 40px;
+    }
+
+    .welcome-section h2 {
+        font-size: 50px;
+    }
+
+    .welcome-section p {
+        font-size: 18px;
+    }
+
+    .restaurant-section,
+    .cuisine-section {
+        padding: 1.5em 0;
+    }
+
+    .cuisine-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine-content img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* Mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .header-left {
+        font-size: 16px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .nav-left {
+        font-size: 18px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .welcome-section {
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    .welcome-section h1 {
+        font-size: 30px;
+    }
+
+    .welcome-section h2 {
+        font-size: 40px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+    }
+
+    .restaurant-section,
+    .cuisine-section {
+        padding: 1em 0;
+    }
+
+    .cuisine-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine-content img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 0.5em;
+    }
 }

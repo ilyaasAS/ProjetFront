@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <div id="container">
+    <div id="app-container">
     <!-- En-tête -->
     <header>
         <div class="header-left">
@@ -39,6 +39,7 @@
 
     <!-- Section Bienvenue avec Navigation -->
     <section class="welcome-section">
+    <div class="container-struct">
         <nav>
             <div class="nav-left">
                 <span>L'AVANT PREMIÈRE</span>
@@ -53,18 +54,26 @@
                 <a href="#">Contactez-nous</a>
             </div>
         </nav>
+    </div>
+
+    <div class="container-struct">
         <div class="welcome-content">
             <h1>Bienvenue</h1>
             <h2>L'AVANT PREMIÈRE</h2>
             <p>Restaurant - Comptoir</p>
             <a href="#" class="btn-commander">Commander en ligne !</a>
         </div>
+    </div>
+
     </section>
 
 
 
  <!-- Card 1 avec image à gauche -->
- <section class="restaurant-section">
+  
+<section class="restaurant-section">
+
+<div class="container-struct">
     <div class="restaurant-content">
         <div class="image-container">
             <img src="https://lh3.googleusercontent.com/9bJe-IIVSvSLbdYFtbFHROJl9VR5Ostlevo97-uth6iHCDIpKHPpb6PH_niEGFUBOh_2ZcJmOyPfyXDmMFiRlw=w800-h600" alt="Restaurant">
@@ -78,14 +87,18 @@
             <p>Aux commandes, retrouvez Marie-Laure et Adrien, qui vous proposent ici de passer un moment convivial en famille ou entre amis, en sortant du travail ou avant votre séance de cinéma !</p>
         </div>
     </div>
+</div>
+
 </section>
 
-
+<div class="container-row">
     <img src="https://lh3.googleusercontent.com/Xkpb505UHOeGNaGXMtEEKERrelB37sfTLrBqFU1YuF2LHhl3lei51FJ3CO-hksrIc587zXoZnjsGV6Da8JopHg=w1280" alt="Notre Restaurant">
-
+</div>
 
     <!-- Section Notre Cuisine -->
 <section class="cuisine-section">
+
+<div class="container-struct">
     <div class="cuisine-content">
         <div class="text-container">
             <span class="highlight-red">Dégustez</span>
@@ -97,12 +110,16 @@
             <img src="https://lh3.googleusercontent.com/Q8JdnDN9brkulKjtkuEEgOobqpqX1w3MFV7kta2WPwN5nazcgE9d7-pd_-8kLIFqEeCWlrNBD6pULhIWA2rRWQ=s500" alt="Notre Cuisine">
         </div>
     </div>
+</div>
+
 </section>
 
 
 
     <!-- Section avec 3 images -->
     <section class="three-images-section">
+
+    <div class="container-col">
         <div class="three-images-content">
             <div class="three-image-container">
                 <img src="https://lh3.googleusercontent.com/Kgny4OZJz_gJ8xEqZvfPqzG-5GVxrLGjq8N5ggz7wgdrfwfVRILtjmOMteNcEZrn9jd7Ohvm-ygxR1_u-CT4=s1200" alt="Image 1">
@@ -110,10 +127,14 @@
                 <img src="https://lh3.googleusercontent.com/NvqaTZeF-2DGzY2du1XxYkNDkFcGghOA2H0bO5UHX92qHaOAPJ13cG39AYjHRffbN4kxIlOgN5DI5MV7DcGiUg=s1200" alt="Image 3">
             </div>
         </div>
+    </div>
+
     </section>
 
     <!-- Section Newsletter et Horaires -->
     <section class="info-section">
+
+    <div class="container-struct">
         <div class="newsletter-section">
             <h2>NEWSLETTER</h2>
             <hr class="underline">
@@ -125,6 +146,9 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <div class="container-struct">
 
         <div class="hours-section">
             <h2>HORAIRES D'OUVERTURE</h2>
@@ -140,6 +164,9 @@
             </div>
         </div>
 
+    </div>    
+
+    <div class="container-struct">
         <div class="map-section">
             <h2>CARTE</h2>
             <hr class="underline">
@@ -148,14 +175,41 @@
                 <p>20 Rue de l'Espérance<br>95800 Cergy</p>
             </div>
         </div>
+    </div>    
         
         
     </section>
 
     <!-- Pied de page -->
     <footer>
-        <p>&copy; L'AVANT PREMIÈRE 2024 — <a href="#">Mentions légales</a> — <a href="#">Politique de confidentialité</a></p>
+    <div class="container-struct">
+        <div class="footer-left">
+            <p>
+                <span class="footer-copyright">&copy; L'AVANT PREMIÈRE 2024</span> 
+                <span class="footer-dash"> — </span>
+                <a href="#" class="legal-link">Mentions légales</a> 
+                <span class="footer-dash"> — </span>
+                <a href="#" class="recruitment-link">Nous recrutons !</a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="container-struct">
+        <div class="footer-right">
+            <p>
+                <span class="footer-highlight">Propulsé par</span> 
+                <span class="footer-company">ClicResto</span> 
+                <span class="footer-dash"> - </span>
+                <span class="footer-highlight">Administration</span>
+            </p>
+        </div>
+    </div>    
+    
+
     </footer>
+    
+    
+    
 </div>
 </body>
 </html>
