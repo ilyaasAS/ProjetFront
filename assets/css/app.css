@@ -733,7 +733,7 @@ footer {
     }
 }
 
-/* Styles pour la section info */
+/* Section info pour les grands écrans */
 .info-section {
     display: flex;
     justify-content: space-around;
@@ -823,6 +823,36 @@ footer {
 .map-box p {
     margin: 0;
 }
+
+/* Media Queries */
+
+/* Mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Afficher les éléments les uns en dessous des autres */
+        align-items: center; /* Centrer les éléments horizontalement */
+        padding: 20px; /* Ajuster le padding si nécessaire */
+    }
+
+    .newsletter-section {
+        order: 2; /* Met la section Newsletter après Horaires */
+    }
+
+    .hours-section {
+        order: 1; /* Met la section Horaires avant Newsletter */
+    }
+
+    .map-section {
+        order: 3; /* Met la section Map après Newsletter */
+    }
+
+    .newsletter-section,
+    .hours-section,
+    .map-section {
+        margin: 10px 0; /* Espacement entre les sections */
+    }
+}
+
 
 /* Media Queries */
 

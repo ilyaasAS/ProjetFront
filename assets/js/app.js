@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pageTitle = pageTitles[path] || 'Page actuelle';
         currentPageElement.textContent = `Page actuelle : ${pageTitle}`;
 
+        // Gérer l'ouverture et la fermeture du menu burger
         burgerIcon.addEventListener('click', function() {
             const isVisible = burgerNav.style.display === 'block';
             burgerNav.style.display = isVisible ? 'none' : 'block';
