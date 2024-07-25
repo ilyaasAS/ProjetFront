@@ -768,7 +768,6 @@ footer {
 .burger-menu {
     display: none; /* Masqué par défaut */
     position: relative;
-    margin-top: 20px; /* Ajustez la marge si nécessaire pour l'espace sous la section de bienvenue */
     background-color: var(--button-bg-color-langue); /* Fond rouge pour le menu burger */
     border-radius: 5px;
     text-align: center;
