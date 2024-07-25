@@ -287,7 +287,7 @@ nav {
     justify-content: center;
     align-items: center;
     max-width: 1150px;
-    margin: 0 auto;
+    margin: 60px;
 }
 
 .restaurant-content {
@@ -324,6 +324,85 @@ nav {
     color: var(--text-color-dark);
 }
 
+/* Section Restaurant */
+.restaurant-section {
+    padding: 2em 0;
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1150px;
+    margin: 60px;
+}
+
+.restaurant-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.text-container h4 {
+    color: #000;
+    font-weight: 900;
+    font-size: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: bold;
+}
+
+.text-container p {
+    margin: 10px 0;
+    color: var(--text-color-dark);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 600px) {
+    .restaurant-section {
+        margin: 20px; /* Ajustement de la marge pour les petits écrans */
+    }
+
+    .restaurant-content {
+        flex-direction: column-reverse; /* Place l'image en dessous du texte */
+        align-items: flex-start; /* Aligner les éléments à gauche */
+    }
+
+    .text-container {
+        font-size: 24px; /* Taille de police plus petite pour les petits écrans */
+        line-height: 28px;
+        padding: 0.5em;
+    }
+
+    .text-container h4 {
+        font-size: 28px; /* Ajustement de la taille de la police pour les titres */
+    }
+}
+
+
+
 /* Section Notre Cuisine */
 .cuisine-section {
     padding: 2em 0;
@@ -335,7 +414,7 @@ nav {
     justify-content: center;
     align-items: center;
     max-width: 1150px;
-    margin: 0 auto;
+    margin: 60px;
 }
 
 .cuisine-content {
@@ -698,7 +777,7 @@ footer {
 .burger-icon-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: var(--button-bg-color-langue); /* Fond rouge pour le conteneur */
     padding: 10px;
 }
@@ -930,4 +1009,9 @@ footer {
         display: block;
     }
 }
+
+
+
+
+
 
