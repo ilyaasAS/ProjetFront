@@ -1,5 +1,22 @@
 @import url(./components/global.css);
 
+/* Variables CSS */
+:root {
+    --main-bg-color: #f4f4f4;
+    --header-bg-color: #080808;
+    --header-text-color: white;
+    --button-bg-color-reserver: #4CAF50;
+    --button-bg-color-reserver-hover: #45a049;
+    --button-bg-color-panier: #2196F3;
+    --button-bg-color-panier-hover: #0b79d0;
+    --button-bg-color-langue: red;
+    --button-bg-color-langue-hover: darkred;
+    --highlight-color: #F23131;
+    --text-color-light: #333;
+    --text-color-dark: #555;
+    --border-color: #333;
+}
+
 /* Reset de base */
 * {
     margin: 0;
@@ -11,11 +28,12 @@
 /* Styles du corps */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--main-bg-color);
+    color: var(--text-color-light);
     line-height: 1.6;
 }
 
+/* Conteneur principal */
 .content-container {
     width: 100%;
     max-width: 1140px;
@@ -28,16 +46,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
-    background-color: #080808;
-    color: white;
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* Styles pour les éléments à l'intérieur de l'en-tête */
@@ -49,7 +67,7 @@ header {
 .header-left a {
     margin-right: 20px;
     text-decoration: none;
-    color: white;
+    color: var(--header-text-color);
 }
 
 .reviews {
@@ -76,7 +94,7 @@ header {
     margin-left: 10px;
     padding: 5px 10px;
     border: none;
-    color: white;
+    color: var(--header-text-color);
     font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
@@ -89,16 +107,16 @@ header {
 
 /* Bouton Réserver */
 .btn-reserver {
-    background-color: #4CAF50;
+    background-color: var(--button-bg-color-reserver);
 }
 
 .btn-reserver:hover {
-    background-color: #45a049;
+    background-color: var(--button-bg-color-reserver-hover);
 }
 
 /* Panier */
 .btn-panier {
-    background-color: #2196F3;
+    background-color: var(--button-bg-color-panier);
 }
 
 .btn-panier i {
@@ -107,12 +125,12 @@ header {
 }
 
 .btn-panier:hover {
-    background-color: #0b79d0;
+    background-color: var(--button-bg-color-panier-hover);
 }
 
 /* Bouton Langue */
 .btn-langue {
-    background-color: red;
+    background-color: var(--button-bg-color-langue);
 }
 
 .btn-langue .flag-icon {
@@ -123,7 +141,7 @@ header {
 }
 
 .btn-langue:hover {
-    background-color: darkred;
+    background-color: var(--button-bg-color-langue-hover);
 }
 
 /* Navigation */
@@ -133,29 +151,29 @@ nav {
     align-items: center;
     background-color: rgba(34, 34, 34, 0.3);
     padding: 10px 20px;
-    color: white;
+    color: var(--header-text-color);
     width: 100%;
     position: relative;
     top: -97px;
     left: 0;
     z-index: 999;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* Éléments de la navigation */
 .nav-left {
-    color: #fff;
+    color: var(--header-text-color);
     text-transform: uppercase;
     font-size: 25px;
     letter-spacing: 3px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--header-text-color);
     font-weight: bold;
 }
 
 /* Liens de la navigation */
 .nav-right a {
-    color: #fff;
+    color: var(--header-text-color);
     display: inline-block;
     padding: 7px 0;
     margin: 0 10px;
@@ -172,10 +190,10 @@ nav {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px; /* Ajustez cette valeur pour la distance entre le texte et le soulignage */
+    bottom: -5px;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--header-text-color);
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
@@ -188,7 +206,7 @@ nav {
 
 /* Soulignage de la page active */
 .nav-right a.active {
-    color: #F6BB42 !important;
+    color: var(--highlight-color) !important;
     font-size: medium !important;
     font-weight: bold !important;
 }
@@ -197,7 +215,6 @@ nav {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
 
 /* Section Bienvenue */
 .welcome-section {
@@ -222,7 +239,7 @@ nav {
 
 .welcome-section h1 {
     font-family: 'Kristi', cursive;
-    color: #F23131;
+    color: var(--highlight-color);
     font-size: 50px;
     line-height: 50px;
     font-weight: 300;
@@ -260,26 +277,24 @@ nav {
     text-transform: uppercase;
 }
 
-/* Card 2 */
-/* Section restaurant */
-
+/* Section Restaurant */
 .restaurant-section {
     padding: 2em 0;
     background-color: #ffffff;
-    margin-bottom: 2em; /* Augmentez l'espace entre la section restaurant et la suivante */
-    border-radius: 2px; /* Gardez le rayon des coins pour la section restaurant */
+    margin-bottom: 2em;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1150px; /* Largeur totale de la section */
-    margin: 0 auto; /* Centre la section */
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
 .restaurant-content {
     display: flex;
     align-items: center;
-    width: 100%; /* Assure que le contenu prend toute la largeur de la section */
+    width: 100%;
     padding: 0 20px;
 }
 
@@ -300,40 +315,40 @@ nav {
 }
 
 .text-container span, .text-container h4 {
-    font-family: 'Kristi'; /* Police spécifique */
-    color: #F23131;
+    font-family: 'Kristi';
+    color: var(--highlight-color);
     font-size: 50px;
     line-height: 50px;
 }
 
 .text-container p {
-    color: #555;
+    color: var(--text-color-dark);
 }
 
 /* Section Notre Cuisine */
 .cuisine-section {
     padding: 2em 0;
-    background-color: #ffffff; /* Assurez-vous que la couleur de fond est la même que pour restaurant */
-    margin-bottom: 2em; /* Assurez-vous que l'espace en bas est le même que pour restaurant */
-    border-radius: 2px; /* Ajustez le rayon des coins pour correspondre à restaurant */
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1150px; /* Ajustez la largeur totale pour correspondre à restaurant */
-    margin: 0 auto; /* Assurez-vous que la section est centrée */
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
 .cuisine-content {
     display: flex;
     align-items: center;
-    width: 100%; /* Assurez-vous que le contenu prend toute la largeur de la section */
+    width: 100%;
     padding: 0 20px;
 }
 
 .image-container {
     flex: 1;
-    padding: 10px; /* Gardez le padding consistant avec le design global */
+    padding: 10px;
     display: flex;
     justify-content: flex-end;
 }
@@ -346,55 +361,57 @@ nav {
 
 .text-container {
     flex: 1;
-    padding: 1em; /* Assurez-vous que le padding est cohérent avec restaurant */
+    padding: 1em;
     text-align: left;
 }
 
 .text-container h4 {
     color: #000;
     font-weight: 900;
-    font-size: 35px; /* Conserver la taille spécifiée */
+    font-size: 35px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-family: 'Source Sans Pro'; /* Police spécifique */
+    font-family: 'Source Sans Pro';
     font-style: bold;
 }
 
 .text-container p {
     margin: 10px 0;
-    color: #555;
-    font-family: 'Roboto', sans-serif; /* Police spécifique */
+    color: var(--text-color-dark);
+    font-family: 'Roboto', sans-serif;
 }
-
 
 /* Section avec 3 images */
 .three-images-section {
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--main-bg-color);
 }
 
 .three-images-content {
     display: flex;
+    flex-direction: column; /* Changer la direction pour empiler les images verticalement */
+    align-items: center; /* Centrer les images horizontalement */
     text-align: center;
-    justify-content: space-between;
-    
+}
+
+.three-image-container {
+    width: 100%; /* Prendre toute la largeur disponible */
+    margin-bottom: 20px; /* Espacement entre les images */
 }
 
 .three-image-container img {
-    width: 32%;
+    width: 100%; /* Ajuster la largeur de l'image à 100% de son conteneur */
+    height: auto; /* Garder les proportions de l'image */
     border-radius: 10px;
-    object-fit: cover;
-    height: 650px; /* Ajustez la hauteur souhaitée ici */
-    border-radius: 2px;
-    height: 500px;
 }
+
 
 /* Newsletter et Horaires */
 .info-section {
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--main-bg-color);
 }
 
 .newsletter-section,
@@ -505,7 +522,7 @@ footer {
 }
 
 .footer-copyright {
-    color: #F23131;
+    color: var(--highlight-color);
 }
 
 .legal-link,
@@ -514,11 +531,11 @@ footer {
 }
 
 .recruitment-link {
-    color: #F23131;
+    color: var(--highlight-color);
 }
 
 .footer-highlight {
-    color: #F23131;
+    color: var(--highlight-color);
 }
 
 .footer-company {
@@ -526,7 +543,7 @@ footer {
 }
 
 .footer-dash {
-    color: #F23131;
+    color: var(--highlight-color);
 }
 
 .footer-right a:hover,
@@ -654,12 +671,173 @@ footer {
     }
 }
 
-.picture img {
-    border-radius: 2px;
-    height: 500px;
-    box-sizing: border-box;
-    width: 1260px;
-    object-fit: cover;
+/* Style pour le menu burger */
+.burger-menu {
+    display: none; /* Masqué par défaut */
+    position: relative;
+    margin-top: 20px; /* Ajustez la marge si nécessaire pour l'espace sous la section de bienvenue */
+    background-color: var(--button-bg-color-langue); /* Fond rouge pour le menu burger */
+    border-radius: 5px;
+    text-align: center;
 }
 
+.burger-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--button-bg-color-langue); /* Fond rouge pour le conteneur */
+    padding: 10px;
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--header-text-color); /* Texte blanc pour l'icône */
+}
+
+.current-page {
+    color: var(--header-text-color); /* Texte blanc pour le titre */
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px; /* Espacement entre l'icône et le titre */
+}
+
+.burger-nav {
+    display: none; /* Caché par défaut */
+    background-color: var(--button-bg-color-langue); /* Fond rouge pour le menu burger */
+    border-radius: 5px;
+    width: 100%; /* Pour occuper toute la largeur */
+}
+
+.burger-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-nav ul li {
+    border-bottom: 1px solid #444;
+}
+
+.burger-nav ul li a {
+    color: var(--header-text-color); /* Texte blanc */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Media Query pour afficher le menu burger sur mobile */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Affiche le menu burger */
+    }
+}
+
+/* Styles pour la section info */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: var(--main-bg-color);
+}
+
+.newsletter-section,
+.hours-section,
+.map-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.newsletter-section h2,
+.hours-section h2,
+.map-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+.newsletter-section .newsletter-box,
+.hours-section .hours-box,
+.map-section .map-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section p,
+.hours-section p,
+.map-section p {
+    margin-bottom: 10px;
+}
+
+.newsletter-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-section input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-section button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-section button:hover {
+    background-color: #e55347;
+}
+
+.hours-section .hours-box p {
+    margin: 10px 0;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.map-box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.map-box img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.map-box p {
+    margin: 0;
+}
+
+/* Media Queries */
+
+/* Mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Afficher les éléments les uns en dessous des autres */
+        align-items: center; /* Centrer les éléments horizontalement */
+        padding: 20px; /* Ajuster le padding si nécessaire */
+    }
+
+    .newsletter-section,
+    .hours-section,
+    .map-section {
+        margin: 10px 0; /* Espacement entre les sections */
+    }
+}
 
