@@ -15,21 +15,21 @@
     <!-- En-tête -->
     <header>
         <div class="header-left">
-            <a href="#"><i class="fas fa-phone-alt fa-fw"></i> Afficher</a>
-            <a href="#"><i class="fas fa-map-marker-alt fa-fw"></i> Plan</a>
+            <a href="#" aria-label="Afficher le numéro de téléphone"><i class="fas fa-phone-alt fa-fw"></i> Afficher</a>
+            <a href="#" aria-label="Afficher le plan"><i class="fas fa-map-marker-alt fa-fw"></i> Plan</a>
             <div class="reviews">
-                <span>★★★★★</span>
+                <span aria-label="Évaluation">★★★★★</span>
                 <span>3 469 Avis</span>
             </div>
         </div>
         <div class="header-right">
-            <button class="btn btn-reserver" type="button">
+            <button class="btn btn-reserver" type="button" aria-label="Réserver une table">
                 <i class="fas fa-calendar-alt"></i> Réserver
             </button>
-            <button class="btn btn-panier" type="button">
+            <button class="btn btn-panier" type="button" aria-label="Afficher le panier">
                 <i class="fas fa-shopping-cart"></i> Panier
             </button>
-            <button class="btn btn-langue" type="button">
+            <button class="btn btn-langue" type="button" aria-label="Changer la langue">
                 <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="FR" class="flag-icon"> FR
             </button>
         </div>
@@ -43,13 +43,13 @@
                     <span>L'AVANT PREMIÈRE</span>
                 </div>
                 <div class="nav-right">
-                    <a href="#">Accueil</a>
-                    <a href="#">Commandes en ligne</a>
-                    <a href="#" class="highlight-red">À la carte</a>
-                    <a href="#">Chèque cadeau</a>
-                    <a href="#">Galerie Photo</a>
-                    <a href="#">Actualités</a>
-                    <a href="#">Contactez-nous</a>
+                    <a href="#" aria-label="Accueil">Accueil</a>
+                    <a href="#" aria-label="Commandes en ligne">Commandes en ligne</a>
+                    <a href="#" class="highlight-red" aria-label="À la carte">À la carte</a>
+                    <a href="#" aria-label="Chèque cadeau">Chèque cadeau</a>
+                    <a href="#" aria-label="Galerie Photo">Galerie Photo</a>
+                    <a href="#" aria-label="Actualités">Actualités</a>
+                    <a href="#" aria-label="Contactez-nous">Contactez-nous</a>
                 </div>
             </nav>
         </div>
@@ -58,7 +58,7 @@
                 <h1>Bienvenue</h1>
                 <h2>L'AVANT PREMIÈRE</h2>
                 <p>Restaurant - Comptoir</p>
-                <a href="#" class="btn-commander">Commander en ligne !</a>
+                <a href="#" class="btn-commander" aria-label="Commander en ligne">Commander en ligne !</a>
             </div>
         </div>
     </section>
@@ -66,20 +66,20 @@
     <!-- Menu Burger pour mobile -->
     <div class="burger-menu">
         <div class="burger-icon-container">
-            <div class="burger-icon" id="burger-icon">
+            <div class="burger-icon" id="burger-icon" aria-label="Menu Burger">
                 ☰
             </div>
-            <span id="current-page" class="current-page">Page actuelle : Accueil</span> <!-- Affiche la page actuelle -->
+            <span id="current-page" class="current-page">Page actuelle : Accueil</span>
         </div>
         <nav class="burger-nav" id="burger-nav">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="commandes.html">Commandes en ligne</a></li>
-                <li><a href="carte.html" class="highlight-red">À la carte</a></li>
-                <li><a href="cheque-cadeau.html">Chèque cadeau</a></li>
-                <li><a href="galerie.html">Galerie Photo</a></li>
-                <li><a href="actualites.html">Actualités</a></li>
-                <li><a href="contact.html">Contactez-nous</a></li>
+                <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
+                <li><a href="commandes.html" aria-label="Commandes en ligne">Commandes en ligne</a></li>
+                <li><a href="carte.html" class="highlight-red" aria-label="À la carte">À la carte</a></li>
+                <li><a href="cheque-cadeau.html" aria-label="Chèque cadeau">Chèque cadeau</a></li>
+                <li><a href="galerie.html" aria-label="Galerie Photo">Galerie Photo</a></li>
+                <li><a href="actualites.html" aria-label="Actualités">Actualités</a></li>
+                <li><a href="contact.html" aria-label="Contactez-nous">Contactez-nous</a></li>
             </ul>
         </nav>
     </div>
@@ -89,13 +89,12 @@
         <div class="container-struct">
             <div class="restaurant-content">
                 <div class="image-container">
-                    <img src="https://lh3.googleusercontent.com/9bJe-IIVSvSLbdYFtbFHROJl9VR5Ostlevo97-uth6iHCDIpKHPpb6PH_niEGFUBOh_2ZcJmOyPfyXDmMFiRlw=w800-h600" alt="Restaurant">
+                    <img src="https://lh3.googleusercontent.com/9bJe-IIVSvSLbdYFtbFHROJl9VR5Ostlevo97-uth6iHCDIpKHPpb6PH_niEGFUBOh_2ZcJmOyPfyXDmMFiRlw=w800-h600" alt="Vue du restaurant">
                 </div>
                 <div class="text-container">
                     <span>Découvrez</span>
                     <h4>NOTRE RESTAURANT</h4>
-                    <p>Découvrez vite l'Avant-Première, brasserie traditionnelle dans les Hauts de Cergy (anciennement Cergy le Haut), face au cinéma UGC Ciné Cité Cergy le Haut.
-                        Inauguré début juillet 2017, le restaurant vous accueille midis et soirs, ainsi qu'en journée pour boire un verre ou pour vous restaurer.</p>
+                    <p>Découvrez vite l'Avant-Première, brasserie traditionnelle dans les Hauts de Cergy (anciennement Cergy le Haut), face au cinéma UGC Ciné Cité Cergy le Haut. Inauguré début juillet 2017, le restaurant vous accueille midis et soirs, ainsi qu'en journée pour boire un verre ou pour vous restaurer.</p>
                     <hr>
                     <p>Aux commandes, retrouvez Marie-Laure et Adrien, qui vous proposent ici de passer un moment convivial en famille ou entre amis, en sortant du travail ou avant votre séance de cinéma !</p>
                 </div>
@@ -107,7 +106,7 @@
     <section class="picture">
         <div class="container-row">
             <span>
-                <img src="https://lh3.googleusercontent.com/Xkpb505UHOeGNaGXMtEEKERrelB37sfTLrBqFU1YuF2LHhl3lei51FJ3CO-hksrIc587zXoZnjsGV6Da8JopHg=w1280" alt="Notre Restaurant">
+                <img src="https://lh3.googleusercontent.com/Xkpb505UHOeGNaGXMtEEKERrelB37sfTLrBqFU1YuF2LHhl3lei51FJ3CO-hksrIc587zXoZnjsGV6Da8JopHg=w1280" alt="Ambiance du restaurant">
             </span>
         </div>
     </section>
@@ -123,7 +122,7 @@
                     <p>Les amateurs y retrouveront également des burgers et des pizzas le tout fait-maison bien sûr.</p>
                 </div>
                 <div class="image-container">
-                    <img src="https://lh3.googleusercontent.com/Q8JdnDN9brkulKjtkuEEgOobqpqX1w3MFV7kta2WPwN5nazcgE9d7-pd_-8kLIFqEeCWlrNBD6pULhIWA2rRWQ=s500" alt="Notre Cuisine">
+                    <img src="https://lh3.googleusercontent.com/Q8JdnDN9brkulKjtkuEEgOobqpqX1w3MFV7kta2WPwN5nazcgE9d7-pd_-8kLIFqEeCWlrNBD6pULhIWA2rRWQ=s500" alt="Plats proposés">
                 </div>
             </div>
         </div>
@@ -151,8 +150,8 @@
                 <div class="newsletter-box">
                     <p>Recevez nos dernières nouveautés et des promotions exclusives !</p>
                     <form>
-                        <input type="email" placeholder="Adresse e-mail" required>
-                        <button type="submit">S'inscrire</button>
+                        <input type="email" placeholder="Adresse e-mail" required aria-label="Adresse e-mail">
+                        <button type="submit" aria-label="S'inscrire à la newsletter">S'inscrire</button>
                     </form>
                 </div>
             </div>
@@ -179,7 +178,7 @@
                 <h2>CARTE</h2>
                 <hr class="underline">
                 <div class="map-box">
-                    <img src="https://maps-legacy.freshtiles.com/static/clicresto/2.012923399999977,49.0480166,16/700x467.png" alt="Map">
+                    <img src="https://maps-legacy.freshtiles.com/static/clicresto/2.012923399999977,49.0480166,16/700x467.png" alt="Carte">
                     <p>20 Rue de l'Espérance<br>95800 Cergy</p>
                 </div>
             </div>
