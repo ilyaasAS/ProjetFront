@@ -1,1 +1,1019 @@
 @import url(./components/global.css);
+
+/* Variables CSS */
+:root {
+    --main-bg-color: #f4f4f4;
+    --header-bg-color: #080808;
+    --header-text-color: white;
+    --button-bg-color-reserver: #4CAF50;
+    --button-bg-color-reserver-hover: #45a049;
+    --button-bg-color-panier: #2196F3;
+    --button-bg-color-panier-hover: #0b79d0;
+    --button-bg-color-langue: red;
+    --button-bg-color-langue-hover: darkred;
+    --highlight-color: #F23131;
+    --text-color-light: #333;
+    --text-color-dark: #555;
+    --border-color: #333;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Styles du corps */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color-light);
+    line-height: 1.6;
+}
+
+/* Conteneur principal */
+.content-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+/* Styles pour les éléments à l'intérieur de l'en-tête */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--header-text-color);
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+}
+
+.reviews span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.reviews span:first-child {
+    font-size: 18px;
+    color: #FFD700;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    color: var(--header-text-color);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Bouton Réserver */
+.btn-reserver {
+    background-color: var(--button-bg-color-reserver);
+}
+
+.btn-reserver:hover {
+    background-color: var(--button-bg-color-reserver-hover);
+}
+
+/* Panier */
+.btn-panier {
+    background-color: var(--button-bg-color-panier);
+}
+
+.btn-panier i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.btn-panier:hover {
+    background-color: var(--button-bg-color-panier-hover);
+}
+
+/* Bouton Langue */
+.btn-langue {
+    background-color: var(--button-bg-color-langue);
+}
+
+.btn-langue .flag-icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.btn-langue:hover {
+    background-color: var(--button-bg-color-langue-hover);
+}
+
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--header-text-color);
+    width: 100%;
+    position: relative;
+    top: -97px;
+    left: 0;
+    z-index: 999;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Éléments de la navigation */
+.nav-left {
+    color: var(--header-text-color);
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid var(--header-text-color);
+    font-weight: bold;
+}
+
+/* Liens de la navigation */
+.nav-right a {
+    color: var(--header-text-color);
+    display: inline-block;
+    padding: 7px 0;
+    margin: 0 10px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Soulignage au survol */
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--header-text-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.nav-right a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Soulignage de la page active */
+.nav-right a.active {
+    /* color: red; */
+}
+
+.nav-right a.active::after {
+    /* transform: scaleX(1);
+    transform-origin: bottom left; */
+}
+
+/* Section Bienvenue */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-image: url('https://lh3.googleusercontent.com/0MouoYGGr4smx5tARYQNQidMmaYhK1VWtKDYL8dIdtraYd8c2FwGBDQXyZpaMpUbO1YI_hhGRJS_Zf6xQtv9Uw=s2500');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Styles pour le contenu de la section bienvenue */
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-section h1 {
+    font-family: 'Kristi', cursive;
+    color: var(--highlight-color);
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 300;
+}
+
+.welcome-section h2 {
+    font-weight: 300;
+    font-size: 65px;
+    letter-spacing: -1px;
+    line-height: 66px;
+    text-transform: uppercase;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.btn-commander {
+    box-shadow: inset 0px 1px 0px 0px #9acc85;
+    background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+    background-color: #74ad5a;
+    border: 1px solid #3b6e22;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Section Restaurant */
+.restaurant-section {
+    padding: 2em 0;
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1150px;
+    margin: 60px;
+}
+
+.restaurant-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+}
+
+.text-container span, .text-container h4 {
+    font-family: 'Kristi';
+    color: var(--highlight-color);
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.text-container p {
+    color: var(--text-color-dark);
+}
+
+/* Section Restaurant */
+.restaurant-section {
+    padding: 2em 0;
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1150px;
+    margin: 60px;
+}
+
+.restaurant-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.text-container h4 {
+    color: #000;
+    font-weight: 900;
+    font-size: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: bold;
+}
+
+.text-container p {
+    margin: 10px 0;
+    color: var(--text-color-dark);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 600px) {
+    .restaurant-section {
+        margin: 20px; /* Ajustement de la marge pour les petits écrans */
+    }
+
+    .restaurant-content {
+        flex-direction: column-reverse; /* Place l'image en dessous du texte */
+        align-items: flex-start; /* Aligner les éléments à gauche */
+    }
+
+    .text-container {
+        font-size: 24px; /* Taille de police plus petite pour les petits écrans */
+        line-height: 28px;
+        padding: 0.5em;
+    }
+
+    .text-container h4 {
+        font-size: 28px; /* Ajustement de la taille de la police pour les titres */
+    }
+}
+
+
+
+/* Section Notre Cuisine */
+.cuisine-section {
+    padding: 2em 0;
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1150px;
+    margin: 60px;
+}
+
+.cuisine-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+}
+
+.text-container h4 {
+    color: #000;
+    font-weight: 900;
+    font-size: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+    font-style: bold;
+}
+
+.text-container p {
+    margin: 10px 0;
+    color: var(--text-color-dark);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Section avec 3 images */
+.three-images-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.three-images-content {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+}
+
+.three-image-container img {
+    width: 32%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 500px; /* Hauteur pour les écrans desktop */
+    margin-bottom: 20px; /* Espacement entre les images */
+}
+
+/* Media Queries pour les écrans plus petits (Mobile/Tablettes) */
+@media (max-width: 1024px) {
+    .three-images-content {
+        flex-direction: column; /* Empile les images verticalement */
+        align-items: center; /* Centre les images horizontalement */
+    }
+
+    .three-image-container img {
+        width: 100%; /* Ajuste la largeur des images pour les petits écrans */
+        height: auto; /* Ajuste la hauteur pour garder les proportions */
+        margin-bottom: 20px; /* Espacement entre les images */
+    }
+}
+
+
+
+
+
+
+/* Newsletter et Horaires */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: var(--main-bg-color);
+}
+
+.newsletter-section,
+.hours-section,
+.map-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.newsletter-section h2,
+.hours-section h2,
+.map-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+.newsletter-section .newsletter-box,
+.hours-section .hours-box,
+.map-section .map-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section p,
+.hours-section p,
+.map-section p {
+    margin-bottom: 10px;
+}
+
+.newsletter-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-section input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-section button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-section button:hover {
+    background-color: #e55347;
+}
+
+.hours-section .hours-box p {
+    margin: 10px 0;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.map-box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.map-box img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.map-box p {
+    margin: 0;
+}
+
+/* Pied de page */
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-left p,
+.footer-right p {
+    margin: 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-copyright {
+    color: var(--highlight-color);
+}
+
+.legal-link,
+.recruitment-link {
+    color: #FFF;
+}
+
+.recruitment-link {
+    color: var(--highlight-color);
+}
+
+.footer-highlight {
+    color: var(--highlight-color);
+}
+
+.footer-company {
+    color: #FFF;
+}
+
+.footer-dash {
+    color: var(--highlight-color);
+}
+
+.footer-right a:hover,
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Tablettes (768px à 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-right {
+        margin-bottom: 10px;
+    }
+
+    .nav-left {
+        font-size: 20px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+    }
+
+    .nav-right a {
+        margin: 5px 0;
+    }
+
+    .welcome-section {
+        padding: 80px 10px;
+        text-align: center;
+    }
+
+    .welcome-section h1 {
+        font-size: 50px;
+    }
+
+    .welcome-section h2 {
+        font-size: 50px;
+    }
+
+    .welcome-section p {
+        font-size: 18px;
+    }
+
+    .restaurant-section,
+    .cuisine-section {
+        padding: 1.5em 0;
+    }
+
+    .cuisine-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine-content img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* Mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .header-left {
+        font-size: 16px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .nav-left {
+        font-size: 18px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .welcome-section {
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    .welcome-section h1 {
+        font-size: 50px;
+    }
+
+    .welcome-section h2 {
+        font-size: 40px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+    }
+
+    .restaurant-section,
+    .cuisine-section {
+        padding: 1em 0;
+    }
+
+    .cuisine-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine-content img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 0.5em;
+    }
+}
+
+/* Style pour le menu burger */
+.burger-menu {
+    display: none; /* Masqué par défaut */
+    position: relative;
+    background-color: var(--button-bg-color-langue); /* Fond rouge pour le menu burger */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.burger-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--button-bg-color-langue); /* Fond rouge pour le conteneur */
+    padding: 10px;
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--header-text-color); /* Texte blanc pour l'icône */
+}
+
+.current-page {
+    color: var(--header-text-color); /* Texte blanc pour le titre */
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px; /* Espacement entre l'icône et le titre */
+}
+
+.burger-nav {
+    display: none; /* Caché par défaut */
+    background-color: var(--button-bg-color-langue); /* Fond rouge pour le menu burger */
+    border-radius: 5px;
+    width: 100%; /* Pour occuper toute la largeur */
+}
+
+.burger-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-nav ul li {
+    border-bottom: 1px solid #444;
+}
+
+.burger-nav ul li a {
+    color: var(--header-text-color); /* Texte blanc */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Media Query pour afficher le menu burger sur mobile */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Affiche le menu burger */
+    }
+}
+
+
+
+
+/* Section info pour les grands écrans */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: var(--main-bg-color);
+}
+
+.newsletter-section,
+.hours-section,
+.map-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.newsletter-section h2,
+.hours-section h2,
+.map-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+.newsletter-section .newsletter-box,
+.hours-section .hours-box,
+.map-section .map-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section p,
+.hours-section p,
+.map-section p {
+    margin-bottom: 10px;
+}
+
+.newsletter-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-section input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-section button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-section button:hover {
+    background-color: #e55347;
+}
+
+.hours-section .hours-box p {
+    margin: 10px 0;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.map-box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.map-box img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.map-box p {
+    margin: 0;
+}
+
+/* Media Queries */
+
+/* Mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Afficher les éléments les uns en dessous des autres */
+        align-items: center; /* Centrer les éléments horizontalement */
+        padding: 20px; /* Ajuster le padding si nécessaire */
+    }
+
+    .newsletter-section {
+        order: 2; /* Met la section Newsletter après Horaires */
+    }
+
+    .hours-section {
+        order: 1; /* Met la section Horaires avant Newsletter */
+    }
+
+    .map-section {
+        order: 3; /* Met la section Map après Newsletter */
+    }
+
+    .newsletter-section,
+    .hours-section,
+    .map-section {
+        margin: 10px 0; /* Espacement entre les sections */
+    }
+}
+
+
+/* Media Queries */
+
+/* Mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Afficher les éléments les uns en dessous des autres */
+        align-items: center; /* Centrer les éléments horizontalement */
+        padding: 20px; /* Ajuster le padding si nécessaire */
+    }
+
+    .newsletter-section,
+    .hours-section,
+    .map-section {
+        margin: 10px 0; /* Espacement entre les sections */
+    }
+}
+
+/* Styles de base pour la section image */
+.picture {
+    width: 100%;
+    overflow: hidden;
+}
+
+.picture .container-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* Styles pour les écrans de taille moyenne à grande */
+@media (min-width: 768px) {
+    .picture .container-row {
+        /* Alignement au centre pour les écrans plus grands */
+        text-align: center;
+    }
+
+    .picture img {
+        max-width: 100%;
+    }
+}
+
+/* Styles pour les petits écrans et mobiles */
+@media (max-width: 767px) {
+    .picture .container-row {
+        /* S'assurer que l'image prend toute la largeur sur les petits écrans */
+        display: block;
+    }
+
+    .picture img {
+        /* Ajuster l'image pour les petits écrans */
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+
+
+
+
+
