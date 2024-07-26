@@ -61,4 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Burger menu icon, navigation, or current page element not found.');
     }
+
+    // Initialisation de Parallax.js
+    const parallaxElements = document.querySelectorAll('.parallax');
+    if (parallaxElements.length) {
+        parallaxElements.forEach(function(element) {
+            new Parallax(element);
+        });
+    }
 });
