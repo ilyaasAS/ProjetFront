@@ -70,3 +70,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const accordions = document.querySelectorAll('.accordion-header');
+
+    accordions.forEach(header => {
+        header.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const content = this.nextElementSibling;
+
+            // Close all other accordions
+            accordions.forEach(item => {
+                if (item !== header) {
+                    item.setAttribute('aria-expanded', 'false');
+                    item.nextElementSibling.style.display = 'none';
+                    item.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current accordion
+            this.setAttribute('aria-expanded', !isExpanded);
+            content.style.display = isExpanded ? 'none' : 'block';
+            this.querySelector('.accordion-icon').style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const offset = -index * 100;
+        document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Optionnel : Ajoute un défilement automatique
+    setInterval(nextSlide, 5000); // Change d'image toutes les 5 secondes
+});
+

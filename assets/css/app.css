@@ -205,15 +205,7 @@ nav {
     transform-origin: bottom left;
 }
 
-/* Soulignage de la page active */
-.nav-right a.active {
-    /* color: red; */
-}
 
-.nav-right a.active::after {
-    /* transform: scaleX(1);
-    transform-origin: bottom left; */
-}
 
 /* Section Bienvenue */
 .welcome-section {
@@ -768,7 +760,6 @@ footer {
 .burger-menu {
     display: none; /* Masqué par défaut */
     position: relative;
-    background-color: var(--button-bg-color-langue); /* Fond rouge pour le menu burger */
     border-radius: 5px;
     text-align: center;
 }
@@ -777,7 +768,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--button-bg-color-langue); /* Fond rouge pour le conteneur */
+    background-color: var(--button-bg-color-langue);
     padding: 10px;
 }
 
@@ -1014,6 +1005,139 @@ footer {
 
 
 
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+
+/* Accordéon Styles */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:focus {
+    background-color: #e0e0e0;
+}
+
+.accordion-title {
+    margin: 0;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Style pour le carrousel */
+#carousel-section {
+    position: relative;
+    max-width: 800px; /* Ajuste la largeur maximale si nécessaire */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
 
 
+/* CSS pour la section avec parallaxe */
+.parallax {
+    position: relative;
+    height: 500px; /* Ajuste la hauteur selon tes besoins */
+    background: url('https://lh3.googleusercontent.com/Xkpb505UHOeGNaGXMtEEKERrelB37sfTLrBqFU1YuF2LHhl3lei51FJ3CO-hksrIc587zXoZnjsGV6Da8JopHg=w1280') no-repeat center center fixed;
+    background-size: cover;
+    /* Ajoute d'autres styles si nécessaire */
+}
 
+.container-row {
+    position: relative;
+    z-index: 1; /* Assure que le contenu est au-dessus de l'arrière-plan */
+    text-align: center; /* Centre le texte et les éléments */
+    padding: 150px 20px; /* Ajuste le padding pour espacer le contenu */
+    color: white; /* Ajuste la couleur du texte pour le contraste */
+    font-size: 2em; /* Taille du texte, ajuste selon tes besoins */
+}
